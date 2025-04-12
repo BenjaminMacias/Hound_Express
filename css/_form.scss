@@ -1,0 +1,42 @@
+.formulario {
+    padding: $espaciado;
+    background-color: $color-blanco;
+    margin: $espaciado auto;
+    max-width: 800px;
+    border-radius: $border-radius;
+    box-shadow: $sombra-suave;
+  
+    &__form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+  
+      @include respond-to(phone) {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    &__input,
+    &__select {
+      padding: 0.8rem;
+      border: 1px solid $color-gris-medio;
+      border-radius: 5px;
+      width: 100%;
+    }
+  
+    &__boton {
+      grid-column: span 2;
+      padding: 0.8rem;
+      background-color: $color-primario;
+      color: $color-blanco;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+  
+      @include respond-to(phone) {
+        grid-column: span 1;
+      }
+    }
+  }
+  

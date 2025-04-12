@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hound Express - Seguimiento de Paquetes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__contenedor">
+      <img src="img/logoAzulBlancoHE.png" alt="Logo Hound Express" class="header__logo" />
+      <h1 class="header__titulo">Hound Express</h1>
+    </div>
+    <nav class="header__nav">
+      <ul class="header__nav-lista">
+        <li><a href="#inicio" class="header__nav-link">Inicio</a></li>
+        <li><a href="#formulario-registro" class="header__nav-link">Registro de Guías</a></li>
+        <li><a href="#estado-general" class="header__nav-link">Estado General</a></li>
+        <li><a href="#lista-guias" class="header__nav-link">Lista de Guías</a></li>
+        <li><a href="#buscar-guias" class="header__nav-link">Buscar Guías</a></li>
+      </ul>
+    </nav>
+    <section class="banner">
+      <h2 class="banner__titulo">Rastrea tus envíos</h2>
+      <p class="banner__slogan">Rápido. Seguro. Eficiente.</p>
+      <img src="img/envios.png" alt="Imagen de envíos" class="banner__imagen">
+    </section>
+  </header>
+
+  <main>
+    <section id="buscar-guias" class="busqueda">
+      <h2 class="busqueda__titulo">Buscar Guía</h2>
+      <form class="busqueda__form">
+        <input type="text" class="busqueda__input" placeholder="Ingresa el número de guía" required />
+        <div class="busqueda__acciones">
+          <button type="submit" class="busqueda__boton">Buscar</button>
+          <button type="button" class="busqueda__boton" id="mostrar-todas">Mostrar todas</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="formulario" id="formulario-registro">
+      <form class="formulario__form">
+        <input type="text" placeholder="Número de guía" class="formulario__input" />
+        <input type="text" placeholder="Origen" class="formulario__input" />
+        <input type="text" placeholder="Destino" class="formulario__input" />
+        <input type="text" placeholder="Destinatario" class="formulario__input" />
+        <input type="date" class="formulario__input" />
+        <select class="formulario__select">
+          <option>Pendiente</option>
+          <option>En tránsito</option>
+          <option>Entregado</option>
+        </select>
+        <button type="submit" class="formulario__boton">Registrar Guía</button>
+      </form>
+
+      <!-- 💬 Mensaje de error visual -->
+  <p id="mensaje-error" style="color: red; display: none;"></p>
+    </section>
+
+    <section class="estado" id="estado-general">
+      <div class="estado__grid">
+        <div class="estado__card">Guías activas: 0</div>
+        <div class="estado__card">En tránsito: 0</div>
+        <div class="estado__card">Entregadas: 0</div>
+      </div>
+    </section>
+
+    <section id="lista-guias" class="lista">
+      <h2 class="lista__titulo">Lista de Guías</h2>
+      <table class="lista__tabla">
+        <thead>
+          <tr>
+            <th class="lista__th">Número</th>
+            <th class="lista__th">Estado</th>
+            <th class="lista__th">Origen</th>
+            <th class="lista__th">Destino</th>
+            <th class="lista__th">Última actualización</th>
+            <th class="lista__th">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Las guías se insertarán dinámicamente aquí -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Modal de Historial -->
+  <div id="modal-historial" class="modal">
+    <div class="modal__contenido">
+      <span class="modal__cerrar" id="cerrar-modal">&times;</span>
+      <h3 id="modal-titulo" class="modal__titulo">Historial</h3>
+      <table class="modal__tabla">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Estado</th>
+            <th>Ubicación</th>
+            <th>Observaciones</th>
+          </tr>
+        </thead>
+        <tbody id="modal-tabla-body">
+          <!-- Historial dinámico -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p class="footer__texto">&copy; 2025 Hound Express. Todos los derechos reservados.</p>
+    <nav class="footer__nav">
+      <a href="#">Contacto</a> |
+      <a href="#">Política de privacidad</a> |
+      <a href="#">Redes sociales</a>
+    </nav>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const img = document.querySelector('.banner img');
+      if (img) {
+        const offset = window.scrollY * -0.1;
+        img.style.transform = `translateY(${offset}px)`;
+      }
+    });
+  </script>
+  <script src="js/app.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

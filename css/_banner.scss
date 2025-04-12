@@ -1,0 +1,39 @@
+.banner {
+    margin-top: 1.5rem;
+    background-color: $color-secundario;
+    padding: $espaciado;
+    text-align: center;
+    border-radius: $border-radius;
+    overflow: hidden;
+    position: relative;
+    height: 250px;
+  
+    @include flex-center;
+    flex-direction: column;
+  
+    &__titulo {
+      font-size: 2rem;
+      color: $color-primario;
+      position: relative;
+      z-index: 2;
+    }
+  
+    &__slogan {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      position: relative;
+      z-index: 2;
+    }
+  
+    &__imagen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+  

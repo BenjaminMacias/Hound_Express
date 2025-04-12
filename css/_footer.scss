@@ -1,0 +1,19 @@
+.footer {
+    background-color: $color-primario;
+    color: $color-blanco;
+    text-align: center;
+    padding: 1rem;
+    margin-top: $espaciado;
+  
+    &__nav {
+      margin-top: 0.5rem;
+  
+      a {
+        color: $color-blanco;
+        margin: 0 0.5rem;
+        text-decoration: underline;
+        font-weight: 500;
+      }
+    }
+  }
+  

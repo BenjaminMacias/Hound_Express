@@ -1,0 +1,38 @@
+.header {
+    background-color: $color-blanco;
+    padding: 1rem 2rem;
+    box-shadow: $sombra-suave;
+  
+    &__contenedor {
+      @include flex-center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  
+    &__logo {
+      height: 50px;
+    }
+  
+    &__titulo {
+      font-size: 1.8rem;
+      color: $color-primario;
+    }
+  
+    &__nav {
+      margin-top: 1rem;
+  
+      &-lista {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        flex-wrap: wrap;
+      }
+  
+      &-link {
+        text-decoration: none;
+        color: $color-primario;
+        font-weight: 600;
+      }
+    }
+  }
+  

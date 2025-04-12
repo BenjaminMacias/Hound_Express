@@ -1,0 +1,64 @@
+.historial {
+    padding: $espaciado;
+    margin: $espaciado auto;
+    max-width: 1000px;
+    background-color: $color-blanco;
+    border-radius: $border-radius;
+    box-shadow: $sombra-suave;
+    overflow-x: auto;
+  
+    &__titulo {
+      text-align: center;
+      color: $color-primario;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+  
+    &__descripcion {
+      text-align: center;
+      font-size: 1rem;
+      color: $color-gris-oscuro;
+      margin-bottom: 1rem;
+    }
+  
+    &__contenedor-tabla {
+      overflow-x: auto;
+    }
+  
+    &__tabla {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+  
+      @include respond-to(tablet) {
+        font-size: 0.75rem;
+      }
+  
+      @include respond-to(phone) {
+        font-size: 0.6rem;
+      }
+  
+      thead {
+        background-color: $color-primario;
+        color: $color-blanco;
+      }
+  
+      th, td {
+        padding: 0.5rem;
+        border: 1px solid $color-gris-medio;
+        text-align: center;
+      }
+  
+      tbody tr:nth-child(even) {
+        background-color: $color-gris-claro;
+      }
+  
+      tbody tr:hover {
+        background-color: $color-hover;
+      }
+    }
+  }
+  
+
+
+  

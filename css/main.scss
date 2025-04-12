@@ -1,0 +1,20 @@
+// Utilidades globales
+@import './variables';
+@import './mixins';
+
+// Estructura base
+@import './base';
+
+// Componentes / Secciones
+@import './header';
+@import './banner';
+@import './form';
+@import './estado';
+@import './lista';
+@import './busqueda';
+@import './historial';
+@import './footer';
+@import './responsive';
+
+
+

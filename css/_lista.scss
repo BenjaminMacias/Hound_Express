@@ -1,0 +1,52 @@
+.lista {
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 1000px;
+    background-color: $color-blanco;
+    border-radius: $border-radius;
+    box-shadow: $sombra-suave;
+    overflow-x: auto;
+  
+    &__tabla {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+  
+      @include respond-to(tablet) {
+        font-size: 0.75rem;
+      }
+  
+      @include respond-to(phone) {
+        font-size: 0.6rem;
+      }
+    }
+  
+    &__th,
+    &__td {
+      border: 1px solid $color-gris-medio;
+      padding: 0.5rem;
+      text-align: center;
+    }
+  
+    &__th {
+      background-color: $color-primario;
+      color: $color-blanco;
+    }
+  
+    &__boton {
+      padding: 0.2rem 0.4rem;
+      background-color: $color-primario;
+      color: $color-blanco;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.5rem;
+      margin: 0 2px;
+  
+      @include respond-to(phone) {
+        font-size: 0.35rem;
+        padding: 0.1rem 0.3rem;
+      }
+    }
+  }
+  
